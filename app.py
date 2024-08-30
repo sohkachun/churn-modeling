@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder, OneHotEncoder
 import pickle
 
 #Load model
-model = tf.keras.models.load_model('Notebook\model.h5')
+model = tf.keras.models.load_model('Notebook/model.h5')
 
 #Load the encoder and scaler
 
@@ -19,9 +19,9 @@ def load_pickle_file(filepath):
     else:
         raise FileNotFoundError(f"The file at {filepath} does not exist.")
 
-label_encoder_gender = load_pickle_file('artifact\label_encoder_gender.pkl')
+label_encoder_gender = load_pickle_file('artifact/label_encoder_gender.pkl')
 
-geo_encoder = load_pickle_file('artifact\geo_encoder.pkl')
+geo_encoder = load_pickle_file('artifact/geo_encoder.pkl')
 
 
 scaler = load_pickle_file("artifact/scaler.pkl")
